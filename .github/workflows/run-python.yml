@@ -23,11 +23,8 @@ jobs:
       run: |
         pip3 install -r requirements.txt
 
-    - name: Export secrets
-      run: |
-        export FMP_API_KEY=${{secrets.FMP_API_KEY}}
-
     - name: Run Python Script
       run: |
+        export FMP_API_KEY=${{secrets.FMP_API_KEY}}
         python3 positive_earnings.py
     
