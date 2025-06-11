@@ -1,17 +1,10 @@
 # Stock Identifier
 
-This repository contains a small script that queries the [Financial Modeling Prep](https://financialmodelingprep.com/) API for companies releasing earnings on the current day and prints those that beat their EPS estimates.
+This repository contains a small script that queries Nasdaq's unofficial earnings calendar and earnings surprise endpoints (via a read-only proxy) to print companies reporting today that beat their EPS estimates. No API key is required.
 
 ## Setup
 
-1. Create a `.env` file based on `env.example` and add your FMP API key:
-
-   ```
-   cp env.example .env
-   # Edit .env and set FMP_API_KEY
-   ```
-
-2. Install dependencies:
+1. Install dependencies:
 
    ```bash
    pip install -r requirements.txt
@@ -29,4 +22,4 @@ The script outputs all companies whose reported EPS is greater than the estimate
 
 ## Notes
 
-The Financial Modeling Prep API offers a free tier for limited requests. You can obtain an API key by creating an account on their website.
+Data is fetched from Nasdaq's public endpoints using a proxy service. These endpoints are not officially supported and may change without notice.
