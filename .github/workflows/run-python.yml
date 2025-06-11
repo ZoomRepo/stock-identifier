@@ -25,6 +25,5 @@ jobs:
 
     - name: Run Python Script
       run: |
-        export FMP_API_KEY=${{secrets.FMP_API_KEY}}
         python3 positive_earnings.py
     
